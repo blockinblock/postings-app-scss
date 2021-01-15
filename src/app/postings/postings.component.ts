@@ -100,10 +100,6 @@ export class PostingsComponent implements OnInit, OnDestroy {
     });
   }
 
-  onHandleError(): void {
-    this.error = null;
-  }
-
   ngOnDestroy(): void {
     if (this.postingsSub) {
       this.postingsSub.unsubscribe();

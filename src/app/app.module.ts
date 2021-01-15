@@ -10,11 +10,12 @@ import { FilterPipe } from './postings/filter.pipe';
 import { DetailsComponent } from './details/details.component';
 import { DetailsResolver } from './details/details-resolver.service';
 import { SanitizeHtmlPipe } from './details/sanitize-html.pipe';
-import { LoadingSpinnerComponent } from './shared/loading-spinner.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { DetailsGuard } from './details/details-guard.service';
 import { State } from './state.service';
 import { ResultsComponent } from './results/results.component';
 import { HeaderComponent } from './header/header.component';
+import { ErrorComponent } from './shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
     FilterPipe,
     LoadingSpinnerComponent,
     ResultsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

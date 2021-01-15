@@ -41,10 +41,6 @@ export class DetailsComponent implements OnInit, OnDestroy {
     this.router.navigate(['']);
   }
 
-  onHandleError(): void {
-    this.error = null;
-  }
-
   ngOnDestroy(): void {
     this.paramsSubscription.unsubscribe();
   }
