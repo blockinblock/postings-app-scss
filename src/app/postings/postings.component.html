@@ -1,45 +1,56 @@
 <div class="container">
-  <app-header></app-header>
+  <div>
+    <app-header></app-header>
+  </div>
+
   <app-loading-spinner *ngIf="isFetching && !error"></app-loading-spinner>
   <app-error *ngIf="error" [error]="error"></app-error>
-  <form [formGroup]="searchForm">
-    <div>
-      <label for="country">Select country</label>
+
+  <form class="form" [formGroup]="searchForm">
+    <label for="country">Select country</label>
       <select
-        id="country"
-        formControlName="country">
-        <option *ngFor="let country of countries" [value]="country" >{{ country }}</option>
-      </select>
-    </div>
-    <div>
-      <label for="country">Select department</label>
+      class="form__country"
+      id="country"
+      formControlName="country">
+      <option *ngFor="let country of countries" [value]="country" >{{ country }}</option>
+    </select>
+
+    <label for="department">Select department</label>
       <select
-        id="department"
-        formControlName="department">
-        <option *ngFor="let department of departments" [value]="department" >{{ department }}</option>
-      </select>
-    </div>
-    <button (click)="onReset()">Reset</button>
+      class="form__department"
+      id="department"
+      formControlName="department">
+      <option *ngFor="let department of departments" [value]="department" >{{ department }}</option>
+    </select>
+
+    <button class="form__btn" (click)="onReset()">Reset</button>
   </form>
-  <ng-template #noResults>
+
+  <!-- <ng-template #noResults>
     <app-results [results]="0"></app-results>
-  </ng-template>
-  <div *ngIf="listings; else noResults">
+  </ng-template> -->
+
+  <div *ngIf="listings">
     <div *ngIf="(listings
       | filter:filteredCountry:'country':unfiltered
       | filter:filteredDepartment:'department':unfiltered) as results">
       <app-results [results]="results.length"></app-results>
-      <ul>
-        <li
+      <ul class="listings">
+        <li class="listings__item"
           *ngFor="let listing of results; index as i; count as totResults">
           <div [routerLink]="[ '/details', listing.id ]">
             <span>
-              <h6>{{ listing.name }} ({{ listing.id }})</h6>
-              {{ listing.city }},  {{ listing.country }}
+              <div class="listings__title">
+                {{ listing.name }} ({{ listing.id }})
+              </div>
+              <div class="listings__location">
+                {{ listing.city }},  {{ listing.country }}
+              </div>
             </span>
           </div>
         </li>
       </ul>
     </div>
   </div>
+
 </div>

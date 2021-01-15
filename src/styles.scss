@@ -1,6 +1,10 @@
 // COLOR VARIABLES
-$color-primary: #212529;
-$color-primary-dark: #000;
+$color-primary: #28a745;
+
+$color-secondary: #212529;
+$color-secondary-dark: #000;
+
+$color-grey-light-1: #f9f7f6;
 
 
 // FONT VARIABLES
@@ -22,7 +26,7 @@ html {
 
 body {
   font-family: $font-primary;
-  color: $color-primary;
+  color: $color-secondary-dark;
   font-weight: 300;
   line-height: 1.6;
 }
