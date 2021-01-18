@@ -1,3 +1,38 @@
-.container {
-  margin-top: 20px;
+@import "../../styles.scss";
+
+.details {
+  margin: 2rem;
+
+  display: grid;
+  grid-template-rows: repeat(8, min-content);
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+
+  &__btn {
+    justify-self: start;
+  }
+
+  &__name {
+    font-size: $font-size-lg;
+  }
+
+  &__location {
+    font-size: $font-size-sm;
+  }
+
+  &__description-title {
+    font-size: $font-size-md;
+  }
+
+  &__description-text {
+    font-size: $font-size-sm;
+  }
+
+  &__qualifications-title {
+    font-size: $font-size-md;
+  }
+
+  &__qualifications-text {
+    font-size: $font-size-sm;
+  }
 }

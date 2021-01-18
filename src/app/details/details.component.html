@@ -1,12 +1,12 @@
-<div class="container">
+<div class="details">
   <app-header></app-header>
   <app-loading-spinner *ngIf="isFetching && !error"></app-loading-spinner>
   <app-error *ngIf="error" [error]="error"></app-error>
-  <button (click)="onReturn()">Back to listings</button>
-  <h2>{{ details.name }}</h2>
-  <h6>{{ details.city}}, {{ details.country }}</h6>
-  <h5>{{ details.jobDescriptionTitle }}</h5>
-  <p [innerHTML]="details.jobDescriptionText | sanitizeHtml"></p>
-  <h5>{{ details.qualificationsTitle }}</h5>
-  <p [innerHTML]="details.qualificationsText | sanitizeHtml"></p>
+  <button class="btn details__btn u-margin-bottom-md" (click)="onReturn()">Back to listings</button>
+  <div class="details__name">{{ details.name }}</div>
+  <div class="details__location u-margin-bottom-md">{{ details.city}}, {{ details.country }}</div>
+  <div class="details__description-title">{{ details.jobDescriptionTitle }}</div>
+  <div class="details__description-text u-margin-bottom-sm" [innerHTML]="details.jobDescriptionText | sanitizeHtml"></div>
+  <div class="details__qualifications-title">{{ details.qualificationsTitle }}</div>
+  <div class="details__qualifications-text" [innerHTML]="details.qualificationsText | sanitizeHtml"></div>
 </div>

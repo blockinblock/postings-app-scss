@@ -9,6 +9,9 @@ $color-grey-light-1: #f9f7f6;
 
 // FONT VARIABLES
 $font-primary: "Lato", sans-serif;
+$font-size-sm: 1.25rem;
+$font-size-md: 2rem;
+$font-size-lg: 3rem;
 
 
 *,
@@ -30,3 +33,23 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+p {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  color: $color-grey-light-1;
+  background-color: $color-primary;
+  border-radius: 3px;
+  border: none;
+  padding: 1rem 5rem;
+  cursor: pointer;
+}
+
+
+// UTILITY CLASSES
+.u-margin-bottom-sm { margin-bottom: 1rem; }
+.u-margin-bottom-md { margin-bottom: 2rem; }
+.u-margin-bottom-lg { margin-bottom: 4rem; }
+.u-margin-bottom-hg { margin-bottom: 8rem; }

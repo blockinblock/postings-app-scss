@@ -1,8 +1,5 @@
 <div class="container">
-  <div>
-    <app-header></app-header>
-  </div>
-
+  <app-header></app-header>
   <app-loading-spinner *ngIf="isFetching && !error"></app-loading-spinner>
   <app-error *ngIf="error" [error]="error"></app-error>
 
@@ -23,7 +20,7 @@
       <option *ngFor="let department of departments" [value]="department" >{{ department }}</option>
     </select>
 
-    <button class="form__btn" (click)="onReset()">Reset</button>
+    <button class="btn form__btn" (click)="onReset()">Reset</button>
   </form>
 
   <!-- <ng-template #noResults>
@@ -52,5 +49,4 @@
       </ul>
     </div>
   </div>
-
 </div>

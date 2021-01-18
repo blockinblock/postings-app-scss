@@ -1,11 +1,11 @@
 @import "../../styles.scss";
 
 .container {
-  margin: 2rem auto;
+  margin: 2rem;
 
   display: grid;
-
   grid-template-rows: repeat(2, max-content);
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 2rem;
   justify-content: center;
 
@@ -34,13 +34,6 @@
       grid-row: 2 / 2;
       grid-column: 3 / 4;
       justify-self: center;
-
-      color: $color-grey-light-1;
-      background-color: $color-primary;
-      border-radius: 3px;
-      border: none;
-      padding: 1rem 5rem;
-      cursor: pointer;
     }
   }
 }
@@ -57,10 +50,10 @@
   }
 
   &__title {
-    font-size: 1.7rem;
+    font-size: $font-size-md;
   }
 
   &__location {
-    font-size: 1.2rem;
+    font-size: $font-size-sm;
   }
 }
