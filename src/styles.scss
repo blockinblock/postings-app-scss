@@ -1,10 +1,9 @@
 // COLOR VARIABLES
 $color-primary: #28a745;
-
 $color-secondary: #212529;
-$color-secondary-dark: #000;
 
-$color-grey-light-1: #f9f7f6;
+$color-black: #000;
+$color-white: #fff;
 
 
 // FONT VARIABLES
@@ -12,6 +11,12 @@ $font-primary: "Lato", sans-serif;
 $font-size-sm: 1.25rem;
 $font-size-md: 2rem;
 $font-size-lg: 3rem;
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 62.5em;    //1000px
+$bp-large: 50em;        //800px
+
 
 
 *,
@@ -25,11 +30,15 @@ $font-size-lg: 3rem;
 html {
   box-sizing: border-box;
   font-size: 62.5%;       // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
   font-family: $font-primary;
-  color: $color-secondary-dark;
+  color: $color-black;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -39,7 +48,7 @@ p {
 }
 
 .btn {
-  color: $color-grey-light-1;
+  color: $color-white;
   background-color: $color-primary;
   border-radius: 3px;
   border: none;
