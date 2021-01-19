@@ -16,7 +16,7 @@ $font-size-lg: 3rem;
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 62.5em;    //1000px
 $bp-large: 50em;        //800px
-
+$bp-medium: 37.5em;     //600px
 
 
 *,
@@ -33,6 +33,10 @@ html {
 
   @media only screen and (max-width: $bp-largest) {
     font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 45%;
   }
 }
 

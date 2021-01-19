@@ -35,8 +35,8 @@
       grid-column-gap: 1rem;
 
       @media only screen and (max-width: $bp-large) {
-        grid-template-rows: repeat(3, min-content);
-        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: repeat(5, min-content);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       &-country {
@@ -45,8 +45,8 @@
         border-radius: 3px;
 
         @media only screen and (max-width: $bp-large) {
-          grid-row: 1 / 2;
-          grid-column: 2 / 2;
+          grid-row: 2 / 3;
+          grid-column: 1 / 2;
           justify-self: stretch;
           padding: 1rem;
         }
@@ -83,8 +83,8 @@
           font-size: $font-size-sm;
 
           @media only screen and (max-width: $bp-large) {
-            grid-row: 2 / 2;
-            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
           }
         }
       }
