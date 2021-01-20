@@ -1,6 +1,12 @@
+@import "../../styles.scss";
+
 .header {
 
   &__image {
     height: 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 5rem;
+    }
   }
 }
