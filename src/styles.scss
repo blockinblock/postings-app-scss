@@ -1,5 +1,6 @@
 // COLOR VARIABLES
 $color-primary: #28a745;
+$color-primary-light: #6ebb80;
 $color-secondary: #212529;
 
 $color-black: #000;
@@ -46,6 +47,13 @@ body {
 
 p {
   margin-bottom: 1rem;
+}
+
+select {
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 0.5rem rgba($color-primary-light, .3);
+  }
 }
 
 .btn-primary,
