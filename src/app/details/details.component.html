@@ -3,13 +3,13 @@
     <app-header class="details__header"></app-header>
     <app-loading-spinner *ngIf="isFetching && !error"></app-loading-spinner>
     <app-error *ngIf="error" [error]="error"></app-error>
-    <button class="btn details__btn u-margin-bottom-md" (click)="onReturn()">Back to listings</button>
     <div class="details__name">{{ details.name }}</div>
     <div class="details__location u-margin-bottom-md">{{ details.city}}, {{ details.country }}</div>
     <div class="details__description-title">{{ details.jobDescriptionTitle }}</div>
     <div class="details__description-text u-margin-bottom-sm" [innerHTML]="details.jobDescriptionText | sanitizeHtml"></div>
     <div class="details__qualifications-title">{{ details.qualificationsTitle }}</div>
     <div class="details__qualifications-text" [innerHTML]="details.qualificationsText | sanitizeHtml"></div>
+    <button class="btn details__btn u-margin-bottom-md" (click)="onReturn()">Back to listings</button>
   </div>
 </div>
 

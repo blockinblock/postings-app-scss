@@ -16,6 +16,7 @@ import { State } from './state.service';
 import { ResultsComponent } from './results/results.component';
 import { HeaderComponent } from './header/header.component';
 import { ErrorComponent } from './shared/error/error.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ErrorComponent } from './shared/error/error.component';
     LoadingSpinnerComponent,
     ResultsComponent,
     HeaderComponent,
-    ErrorComponent
+    ErrorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
