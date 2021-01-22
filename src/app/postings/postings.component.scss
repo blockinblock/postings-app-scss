@@ -154,8 +154,8 @@
 }
 
 .listings {
-  grid-row: 3 / -1;
-  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 
   &__list {
     list-style: none;
@@ -163,6 +163,20 @@
     &-item {
       cursor: pointer;
       margin-bottom: 3rem;
+
+      &:hover {
+        background-image: linear-gradient(rgba($color-primary-light, 0.65), rgba($color-primary-light, 0.65));
+        // box-shadow:  0 0 0.5rem rgba($color-primary-light, .65);
+        box-shadow: 0.5rem 0.5rem 1rem rgba($color-black, .2);
+
+        & > div > span > div.listings__list-title  {
+          font-size: $font-size-md-2;
+        }
+
+        & > div > span > div.listings__list-location  {
+          font-size: $font-size-sm-2;
+        }
+      }
     }
 
     &-title {

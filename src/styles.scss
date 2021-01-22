@@ -1,6 +1,7 @@
 // COLOR VARIABLES
 $color-primary: #28a745;
 $color-primary-light: #6ebb80;
+$color-primary-dark: #1D8348;
 $color-secondary: #212529;
 
 $color-black: #000;
@@ -10,7 +11,9 @@ $color-white: #fff;
 // FONT VARIABLES
 $font-primary: "Lato", sans-serif;
 $font-size-sm: 1.25rem;
+$font-size-sm-2: 1.3rem;
 $font-size-md: 2rem;
+$font-size-md-2: 2.1rem;
 $font-size-lg: 3rem;
 
 
@@ -68,15 +71,7 @@ select {
   transition: all .2s;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black,.2);
-  }
-
-  &:active,
-  &:focus {
-      outline: none;
-      transform: translateY(-1px);
-      box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    background-color: $color-primary-dark;
   }
 }
 
