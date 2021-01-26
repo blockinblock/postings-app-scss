@@ -24,10 +24,6 @@
       <button class="btn-primary postings__form-btn" (click)="onReset()">Reset</button>
     </form>
 
-    <!-- <ng-template #noResults>
-      <app-results [results]="0"></app-results>
-    </ng-template> -->
-
     <div class="listings" *ngIf="listings">
       <div *ngIf="(listings
         | filter:filteredCountry:'country':unfiltered

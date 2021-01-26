@@ -18,8 +18,7 @@
     display: grid;
 
     @media only screen and (max-width: $bp-medium) {
-      grid-template-columns: minmax(min-content, max-content);
-      padding: 2rem 5rem;
+      grid-template-columns: 5rem minmax(min-content, max-content) 5rem;
       justify-content: center;
     }
 
@@ -29,7 +28,7 @@
     }
 
     &__footer {
-      grid-column: 3 / -1;
+      grid-column: 2 / -1;
       grid-row: 3 / -1;
       align-self: end;
       justify-self: end;
@@ -65,6 +64,7 @@
         grid-row: 2 / 3;
         grid-column: 1 / 2;
         border-radius: 3px;
+        margin-left: $highlight-offset;
 
         @media only screen and (max-width: $bp-large) {
           grid-row: 2 / 3;
@@ -83,6 +83,7 @@
           grid-column: 1 / 2;
           align-self: center;
           font-size: $font-size-sm;
+          margin-left: $highlight-offset;
 
           @media only screen and (max-width: $bp-large) {
             grid-row: 1 / 2;
@@ -100,6 +101,7 @@
         grid-row: 2 / 3;
         grid-column: 2 / 3;
         border-radius: 3px;
+        margin-left: $highlight-offset;
 
         @media only screen and (max-width: $bp-large) {
           grid-row: 2 / 3;
@@ -119,6 +121,7 @@
           grid-column: 2 / 3;
           align-self: center;
           font-size: $font-size-sm;
+          margin-left: $highlight-offset;
 
           @media only screen and (max-width: $bp-large) {
             grid-row: 1 / 2;
@@ -138,6 +141,7 @@
       &:visited {
         grid-row: 2 / 2;
         grid-column: 3 / 4;
+        margin-left: $highlight-offset;
 
         @media only screen and (max-width: $bp-large) {
           grid-row: 3 / 4;
@@ -162,20 +166,15 @@
 
     &-item {
       cursor: pointer;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      transition: all .1s;
 
       &:hover {
+        transform: scale(1.03) translateX(1rem);
+        border-radius: 4px;
         background-image: linear-gradient(rgba($color-primary-light, 0.65), rgba($color-primary-light, 0.65));
-        // box-shadow:  0 0 0.5rem rgba($color-primary-light, .65);
         box-shadow: 0.5rem 0.5rem 1rem rgba($color-black, .2);
-
-        & > div > span > div.listings__list-title  {
-          font-size: $font-size-md-2;
-        }
-
-        & > div > span > div.listings__list-location  {
-          font-size: $font-size-sm-2;
-        }
       }
     }
 
