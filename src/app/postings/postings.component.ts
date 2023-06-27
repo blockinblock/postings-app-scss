@@ -34,7 +34,7 @@ export class PostingsComponent implements OnInit, OnDestroy {
       department: new FormControl(this.departments[0])
     });
 
-    // Re-instate postings if previously set
+    // Re-instate postings if previously  set
     this.oldPostingsState = this.state.getPostingsState();
     if (this.oldPostingsState) {
       this.oldPostingsState = this.state.getPostingsState();
